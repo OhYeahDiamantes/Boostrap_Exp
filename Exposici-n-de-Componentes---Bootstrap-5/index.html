@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposición Bootstrap 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Exposición de Componentes - Bootstrap 5</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dropdowns">Dropdowns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#list-group">List Group</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#modals">Modals</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Principal + Resumen -->
+  <div class="container mt-4">
+    <section id="home">
+      <h2>Home</h2>
+      <p>A lo largo de esta presentación, exploraremos cómo Bootstrap 5, uno de los frameworks más populares para el desarrollo web, facilita la creación de interfaces de usuario modernas y funcionales. Nos enfocaremos en cinco componentes clave que ofrecen soluciones rápidas y prácticas para organizar y presentar contenido: <strong>Dropdowns, List Group, Modal, Navbar, y Navs & Tabs.</strong></p>
+      <p>En esta guía, veremos cómo implementar y personalizar cada uno de estos componentes, proporcionando ejemplos prácticos para ilustrar su uso y comportamiento en escenarios reales.</p>
+    </section>
+
+    <!-- Navs & Tabs -->
+    <section id="tabs-section" class="mt-4">
+      <h3></h3>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="dropdowns-tab" data-bs-toggle="tab" data-bs-target="#dropdowns-tab-pane" type="button" role="tab" aria-controls="dropdowns-tab-pane" aria-selected="true">Dropdowns</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="list-group-tab" data-bs-toggle="tab" data-bs-target="#list-group-tab-pane" type="button" role="tab" aria-controls="list-group-tab-pane" aria-selected="false">List Group</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="modals-tab" data-bs-toggle="tab" data-bs-target="#modals-tab-pane" type="button" role="tab" aria-controls="modals-tab-pane" aria-selected="false">Modals</button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3" id="myTabContent">
+        <!-- Dropdowns Tab Content -->
+        <div class="tab-pane fade show active" id="dropdowns-tab-pane" role="tabpanel" aria-labelledby="dropdowns-tab">
+          <section id="dropdowns">
+            <h3></h3>
+            <h4>Dropdown</h4>
+            <p>Un dropdown (o menú desplegable) es un elemento de interfaz de usuario que permite a los usuarios seleccionar una opción de una lista que se oculta hasta que el usuario hace clic en el botón o activador.</p>
+            <h4>¿Cómo funciona?</h4>
+            <ol>
+              <li><strong>Botón Desplegable:</strong> Un botón con la clase <code>dropdown-toggle</code> que, al hacer clic, muestra un menú con opciones. Este botón puede tener diferentes estilos (por ejemplo, <code>btn-primary</code> para un botón azul).</li>
+              <li><strong>Menú Desplegable:</strong> Se muestra debajo del botón cuando se activa. Usa la clase <code>dropdown-menu</code> para su estilo y <code>dropdown-item</code> para los elementos del menú.</li>
+            </ol>
+
+            <!-- Primer Dropdown -->
+            <div class="dropdown mt-4">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Primary Dropdown
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+
+            <!-- Segundo Dropdown -->
+            <h4>Segundo Dropdown</h4>
+            <p>El segundo dropdown funciona de manera similar al primero, pero con un estilo diferente para el botón.</p>
+            <div class="dropdown mt-4">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Success Dropdown
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Option 1</a></li>
+                <li><a class="dropdown-item" href="#">Option 2</a></li>
+                <li><a class="dropdown-item" href="#">Option 3</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- List Group Tab Content -->
+        <div class="tab-pane fade" id="list-group-tab-pane" role="tabpanel" aria-labelledby="list-group-tab">
+          <section id="list-group" class="mt-4">
+            <h3></h3>
+            <h4>List Group</h4>
+            <p>Una <strong>list group</strong> es una lista de elementos que se pueden usar para representar contenido en forma de lista, donde cada elemento puede ser interactivo o no.</p>
+            <h4>¿Cómo funciona?</h4>
+            <ol>
+              <li><strong>Elementos de Lista:</strong> Cada elemento de la lista es un enlace (<code>&lt;a&gt;</code>) con la clase <code>list-group-item</code>. Los elementos pueden tener diferentes estados:
+                <ul>
+                  <li><code>active</code>: Marca el ítem como activo, resaltándolo en la lista.</li>
+                  <li><code>disabled</code>: Indica que el ítem no es interactivo y no se puede seleccionar. También usa <code>tabindex="-1"</code> para evitar que se enfoque con el teclado y <code>aria-disabled="true"</code> para la accesibilidad.</li>
+                </ul>
+              </li>
+            </ol>
+            <div class="list-group mt-4">
+              <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                Active item
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                Second item
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                Third item
+              </a>
+              <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
+                Disabled item
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Modals Tab Content -->
+        <div class="tab-pane fade" id="modals-tab-pane" role="tabpanel" aria-labelledby="modals-tab">
+          <section id="modals" class="mt-4">
+            <h3></h3>
+            <h4>Modal</h4>
+            <p>Un <strong>modal</strong> es una ventana emergente que se muestra encima del contenido actual, a menudo usada para mostrar información adicional sin redirigir al usuario a una nueva página.</p>
+            <h4>¿Cómo funciona?</h4>
+            <ol>
+              <li><strong>Botón de Activación:</strong> Un botón que, al hacer clic, abre el modal. Usa el atributo <code>data-bs-toggle="modal"</code> para indicar que debe abrir un modal y <code>data-bs-target</code> para especificar el ID del modal que se debe mostrar.</li>
+              <li><strong>Contenido del Modal:</strong> El modal se compone de tres partes principales:
+                <ul>
+                  <li><code>modal-header</code>: Contiene el título del modal y un botón para cerrarlo.</li>
+                  <li><code>modal-body</code>: Contiene el contenido principal del modal.</li>
+                  <li><code>modal-footer</code>: (Opcional) Puede contener botones o acciones adicionales. En este ejemplo no se usa.</li>
+                </ul>
+              </li>
+              <li><strong>Tipos de Tamaño:</strong> El modal puede ser pequeño (<code>modal-sm</code>) o grande (<code>modal-lg</code>) dependiendo del contenido y del diseño deseado.</li>
+            </ol>
+            <button type="button" class="btn btn-warning mt-4" data-bs-toggle="modal" data-bs-target="#smallModal">
+              Abrir Modal Pequeño
+            </button>
+            <div class="modal fade" id="smallModal" tabindex="-1" aria-labelledby="smallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content custom-modal">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="smallModalLabel">Modal Pequeño</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Este es un modal pequeño.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Sergio Andrés Acevedo Mendivelso y Karol Juliana Bolívar Nieves. Todos los derechos reservados.</p>
+      <p><a href="mailto:seracevedo@uniboyaca.edu.co">seracevedo@uniboyaca.edu.co</a> | <a href="mailto:kjbolivar@uniboyaca.edu.co">kjbolivar@uniboyaca.edu.co</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
